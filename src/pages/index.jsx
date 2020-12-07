@@ -9,7 +9,7 @@ const seoProps = {
   desc: "Main page",
 };
 
-const IndexPage: React.FC = () => {
+const IndexPage  = () => {
   return (
     <>
       <Seo {...seoProps} />

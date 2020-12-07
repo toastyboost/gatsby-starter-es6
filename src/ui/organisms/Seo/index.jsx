@@ -2,16 +2,9 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 
 const site = process.env.WEBSITE_URL;
+ 
 
-type SeoProps = {
-  lang?: string;
-  title?: string;
-  desc?: string;
-  keywords?: string;
-  image?: string;
-};
-
-const Seo = ({ lang = "en", title = "", desc = "", keywords = "", image = "" }: SeoProps) => (
+export const Seo = ({ lang = "en", title = "", desc = "", keywords = "", image = "" }) => (
   <Helmet>
     <html lang={lang} />
     <title>{title}</title>
@@ -44,4 +37,4 @@ const Seo = ({ lang = "en", title = "", desc = "", keywords = "", image = "" }: 
   </Helmet>
 );
 
-export { Seo };
+ 

@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Logo, Link } from "~/ui/atoms";
 import { Menu, Popup } from "~/ui/molecules";
-import { HeaderContainer, Wrapper } from "./styles";
 
 const headerData = [
   {
@@ -15,7 +14,7 @@ const headerData = [
   },
 ];
 
-const Header = () => {
+export const Header = () => {
   const [isHidden, setVisibility] = React.useState(true);
 
   return (
@@ -32,4 +31,16 @@ const Header = () => {
   );
 };
 
-export { Header };
+import styled from "styled-components";
+
+import { Wrap } from "~/styles";
+
+const HeaderContainer = styled.header`
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 12px;
+`;
+
+const Wrapper = styled(Wrap)`
+  display: flex;
+  align-items: center;
+`;

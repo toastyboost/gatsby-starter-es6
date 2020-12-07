@@ -1,13 +1,10 @@
 import * as React from "react";
+import styled from "styled-components";
+import { Link, Anchor } from "~/ui/atoms";
 
 import { MenuContainer, MenuLink, AnchorLink } from "./styles";
-
-type MenuProps = {
-  className?: string;
-  data: { slug: string; caption: string }[];
-};
-
-export const Menu: React.FC<MenuProps> = ({ className, data }) => {
+ 
+export const Menu = ({ className, data }) => {
   return (
     <MenuContainer className={className}>
       {data.map(({ slug, caption }, key) => {
@@ -21,3 +18,18 @@ export const Menu: React.FC<MenuProps> = ({ className, data }) => {
     </MenuContainer>
   );
 };
+
+ 
+ 
+
+const MenuContainer = styled.div`
+  display: flex;
+`;
+
+const MenuLink = styled(Link)`
+  margin: 0 16px;
+`;
+
+const AnchorLink = styled(Anchor)`
+  margin: 0 16px;
+`;

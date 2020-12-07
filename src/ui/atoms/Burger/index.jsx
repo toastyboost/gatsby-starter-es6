@@ -1,11 +1,22 @@
+import * as React from "react";
 import styled from "styled-components";
+
+export const Burger = ({ className, isVisible, onClick }) => {
+  return (
+    <StyledBurgerContainer className={className} onClick={onClick}>
+      <StyledBurgerBox>
+        <StyledBurgerInner isActive={isVisible} />
+      </StyledBurgerBox>
+    </StyledBurgerContainer>
+  );
+};
 
 const width = 25;
 const height = 3;
 const radius = 10;
 const theme = "#000";
 
-export const StyledBurgerContainer = styled.div`
+const StyledBurgerContainer = styled.div`
   position: relative;
   top: -1px;
   cursor: pointer;
@@ -15,14 +26,14 @@ export const StyledBurgerContainer = styled.div`
   }
 `;
 
-export const StyledBurgerBox = styled.div`
+const StyledBurgerBox = styled.div`
   width: 36px;
   height: 36px;
   display: inline-block;
   position: relative;
 `;
 
-export const StyledBurgerInner = styled.div<{ isActive: boolean }>`
+const StyledBurgerInner = styled.div`
   display: block;
   top: 50%;
   transform: ${(p) => (p.isActive ? "rotate(-45deg)" : "rotate(0deg)")};

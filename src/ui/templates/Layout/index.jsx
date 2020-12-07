@@ -5,7 +5,7 @@ import { GlobalStyles } from "~/styles";
 
 import { Main } from "./styles";
 
-export const Layout: React.FC = ({ children }) => (
+export const Layout  = ({ children }) => (
   <>
     <GlobalStyles />
     <>
@@ -15,3 +15,6 @@ export const Layout: React.FC = ({ children }) => (
     </>
   </>
 );
+import styled from "styled-components";
+
+  const Main = styled.main``;
