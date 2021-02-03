@@ -52,13 +52,13 @@ module.exports = {
           "~/libs": `${__dirname}/src/libs`,
           "~/store": `${__dirname}/src/store`,
         },
-        extensions: ["js"],
+        extensions: ["js", "ts"],
       },
     },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: 0,
+        trackingId: '0',
       },
     },
     {
